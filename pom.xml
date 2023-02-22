@@ -12,15 +12,21 @@
   <packaging>pom</packaging>
          
   <build>
-  <pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-        <version>3.7.0.1746</version>
-      </plugin>
-    </plugins>
-  </pluginManagement>
+  <plugins>
+    <plugin>
+      <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
+      <artifactId>sonar-packaging-maven-plugin</artifactId>
+      <version>1.19.0.1849</version>
+      <executions>
+        <execution>
+          <phase>package</phase>
+          <goals>
+            <goal>build</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
   </build>
   
   <modules>
