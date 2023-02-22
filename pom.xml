@@ -21,7 +21,10 @@
         <execution>
           <phase>package</phase>
           <goals>
-            <goal>build</goal>
+             <properties>
+                  <sonar.java.binaries>target/classes</sonar.java.binaries>
+             </properties>
+          <goal>build</goal>
           </goals>
         </execution>
       </executions>
