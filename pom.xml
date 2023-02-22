@@ -10,6 +10,9 @@
   <artifactId>microservices-by-example-source</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
+  <properties>
+  <sonar.java.binaries>target/classes</sonar.java.binaries>
+  </properties>
          
   <build>
   <plugins>
@@ -21,10 +24,7 @@
         <execution>
           <phase>package</phase>
           <goals>
-             <properties>
-                  <sonar.java.binaries>target/classes</sonar.java.binaries>
-             </properties>
-          <goal>build</goal>
+             <goal>build</goal>
           </goals>
         </execution>
       </executions>
