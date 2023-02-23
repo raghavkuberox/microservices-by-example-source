@@ -14,25 +14,7 @@
   <sonar.java.binaries>target/classes</sonar.java.binaries>
   </properties>
          
-  <build>
-  <plugins>
-    <plugin>
-      <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
-      <artifactId>sonar-packaging-maven-plugin</artifactId>
-      <version>1.19.0.1849</version>
-      <executions>
-        <execution>
-          <phase>package</phase>
-          <goals>
-             <goal>build</goal>
-          </goals>
-        </execution>
-      </executions>
-    </plugin>
-  </plugins>
-  </build>
-  
-  <modules>
+   <modules>
     <module>hola-springboot</module>
     <module>hola-dropwizard</module>
     <module>hola-wildflyswarm</module>
