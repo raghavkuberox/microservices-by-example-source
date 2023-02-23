@@ -13,7 +13,32 @@
   <properties>
   <sonar.java.binaries>target/classes</sonar.java.binaries>
   </properties>
-         
+   
+   <build>
+   <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.0</version>
+                </requireMavenVersion>
+              </rules>    
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+   </plugins>
+   </build>       
+                  
    <modules>
     <module>hola-springboot</module>
     <module>hola-dropwizard</module>
